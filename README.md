@@ -47,7 +47,3 @@ Each habit is stored as a Python dictionary:
    "today_hours": 0.0,
    "completed": False
 }
-
----
-
-## t
