@@ -35,7 +35,7 @@ Everything is stored in memory using a list of Python dictionaries.
 
 ---
 
-##  Habit Structure
+## Habit Structure
 
 Each habit is stored as a Python dictionary:
 
@@ -47,3 +47,7 @@ Each habit is stored as a Python dictionary:
    "today_hours": 0.0,
    "completed": False
 }
+
+---
+
+## t
