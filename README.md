@@ -47,3 +47,59 @@ Each habit is stored as a Python dictionary:
    "today_hours": 0.0,
    "completed": False
 }
+```
+## How the Program Works
+
+The program provides several key functions:
+
+1️⃣ Add Habit
+
+Enter habit name
+
+Enter daily target hours
+
+Habit is saved in the tracker
+
+2️⃣ Mark Habit as Completed
+
+Select a habit by ID
+
+Enter hours completed today
+
+Program calculates:
+
+Updated total hours
+
+Completion percentage
+
+Completion status:
+
+Below target: “Keep going”
+
+Reached target: “Great job!”
+
+Exceeded target: “Outstanding work!”
+
+3️⃣ Show All Habits
+
+Displays:
+
+Habit ID
+
+Name
+
+Target hours
+
+Today's hours
+
+Completion flag
+
+Progress percentage
+
+4️⃣ Delete Habit
+
+Remove a habit by selecting its ID.
+
+5️⃣ Exit
+
+Close the program.
