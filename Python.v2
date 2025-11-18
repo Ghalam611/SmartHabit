@@ -1,0 +1,162 @@
+#SMART_HABIT_PROGRAM
+
+#Create Claas 
+class SmartHabit:
+    def __init__(self):
+        self.habits=[] #create an empty list to store habits
+        self.next_id=1 #habit ID counter
+    def add_habit(self):
+        print(":"*20) # for the shape of output
+        print("Add a new habit")
+        name =input("Enter habit name: ")
+
+        while True: #loop until valid target is entered
+           target =input("Enter habit target as hours per a day: ")
+           if target.strip()=="":
+            print("Target can not be empty")
+            print(":"*20)
+           else:
+               try:
+                    target=float(target)
+                    print(":"*20)
+                    break
+               except:
+                   print("Invalid,Please enter a valid numeric value. ")
+                   print(":"*20)
+
+        #create habit dictionary
+        habit={
+               "id": self.next_id,
+               "name":name,
+               "target_hours":target,
+               "today_hours":0.0,
+               "completed":False
+         }
+        self.habits.append(habit)   #add habit to the list
+        print(f"Habit {name} added with ID {self.next_id}")
+        self.next_id+=1    #increment ID counter
+
+    def find_habit_by_id(self,habit_id):
+        #find habit in the list by ID
+        for habit in self.habits:
+            if habit['id']==habit_id:
+                return habit
+        return None 
+
+    def mark_habit_completed(self):
+            print(":"*20)
+            print("Mark habit as completed")
+
+            if not self.habits:
+                print("No habits yet")
+                print(":"*20)
+                return
+
+            for habit in self.habits:
+                print(f"{habit['id']} {habit['name']} (target {habit['target_hours']}h)")
+            #get user choice by ID
+            try: 
+                choice=int(input("choose habit Number: ")) #(bader) Change from ID to Number 
+                habit = self.find_habit_by_id(choice)
+                if habit is None:
+                    print("Invalid habit Number")
+                    print(":"*20)
+                    return
+
+            except:
+                print("Invalid input.")
+                print(":"*20)
+                return
+
+            # get today's hours 
+            hours= float(input("How many hours did you do today?: "))
+            habit["today_hours"] +=hours
+            habit["completed"] = habit["today_hours"] >= habit["target_hours"]
+            total_percentage = (habit["today_hours"] / habit["target_hours"] ) * 100 #  show the percentage 
+            if habit["target_hours"] == habit["today_hours"]:  #(bader) i have modified the calculation 
+                print("Great job,you have complated your habit for today. ")
+                print("Your total hours is : ", habit["today_hours"],"h","  Your taget is : ",habit["target_hours"],"h") 
+            elif habit["today_hours"] > habit["target_hours"]:
+                print("Outstanding work! You didn’t just reach your goal — you went beyond it !!!") 
+                print("Your total hours is : ", habit["today_hours"],"h","  Your taget is : ",habit["target_hours"],"h")
+            else:
+                print("Not completed yet.")
+                print("Your total hours is : ", habit["today_hours"],"h","  Your taget is : ",habit["target_hours"],"h","  Keep going")
+            print("Your progress is ",total_percentage,"%") 
+            print(":"*20)
+            
+    def show_habits(self):
+        print(":"*20)
+        print("All Habits")
+        if not self.habits:
+            print("No habits to show. ")
+            print(":"*20)
+            return
+
+        # print each habit
+        for habit in self.habits:
+            print(f"Habit Number {habit['id']}:")
+            for key, value in habit.items(): # show key and value
+                print(f"{key}:{value}")
+            total_percentage = (habit["today_hours"] / habit["target_hours"] ) * 100 # show the percentage progress
+            print("Your progress is ",total_percentage,"%")
+            print(":"*20)
+
+    def delete_habit(self):
+        print(":"*20)
+        print("Delete Habit")
+
+        if not self.habits:
+            print("No habits to delete.")
+            print(":"*20)
+            return
+
+        #show habit list
+        for habit in self.habits:
+            print(f"{habit['id']} {habit['name']}.")
+       
+        #choose habit ID to delete
+        try:
+             choice=int(input("Choose habit ID to delete: "))
+             habit=self.find_habit_by_id(choice)
+             if habit is None:
+               print("Invalid ID. ")
+               return
+
+             self.habits.remove(habit)
+             print(f"habit {habit['name']} deleted.")
+             print(":"*20)
+        except:
+             print("Invalid input.")
+             print(":"*20)
+
+    def run(self):
+         while True:
+             #menu options
+             print("="*20)
+             print("   --Smart Habit--  \n")
+             print("1) Add habit \n")
+             print("2) Mark habit as completed \n")
+             print("3) Show all habits \n")
+             print("4) Delete habit \n")
+             print("5) Exit \n")
+             print("="*20)
+
+             choice = input("Choose: ")
+             if choice=="1":
+                 self.add_habit()
+             elif choice=="2":
+                  self.mark_habit_completed()
+             elif choice=="3":
+                 self.show_habits()
+             elif choice=="4":
+                 self.delete_habit()
+             elif choice=="5":
+                 print("Goodbye.")
+                 break
+             else:
+                 print("Invalid option.")
+
+#start program
+traker=SmartHabit()
+traker.run()
