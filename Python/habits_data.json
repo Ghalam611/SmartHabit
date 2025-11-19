@@ -1,0 +1,17 @@
+{
+  "habits": [
+    {
+      "number": 1,
+      "name": "reading ",
+      "target_hours": 1.0,
+      "today_hours": 0,
+      "completed": false,
+      "daily_progress": {
+        "2025-11-19": 0
+      },
+      "created_date": "2025-11-19"
+    }
+  ],
+  "next_number": 2,
+  "last_updated": "2025-11-19T22:28:47.244626"
+}
