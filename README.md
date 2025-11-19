@@ -41,7 +41,7 @@ Each habit is stored as a Python dictionary:
 
 ```python
 {
-   "id": 1,
+   "number": 1,
    "name": "Reading",
    "target_hours": 2.0,
    "today_hours": 0.0,
