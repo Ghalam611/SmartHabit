@@ -30,7 +30,7 @@ Everything is stored in memory using a list of Python dictionaries.
 - 🔥 Overachievement detection with motivational messages  
 - 📊 Progress percentage calculation  
 - 👀 View all habits in a clean format  
-- 🗑️ Delete habits using their ID  
+- 🗑️ Delete habits using their number  
 - 📟 User-friendly text menu system
 
 ---
@@ -62,7 +62,7 @@ Habit is saved in the tracker
 
 2️⃣ Mark Habit as Completed
 
-Select a habit by ID
+Select a habit by number
 
 Enter hours completed today
 
@@ -84,7 +84,7 @@ Exceeded target: “Outstanding work!”
 
 Displays:
 
-Habit ID
+Habit number
 
 Name
 
@@ -98,7 +98,7 @@ Progress percentage
 
 4️⃣ Delete Habit
 
-Remove a habit by selecting its ID.
+Remove a habit by selecting its number.
 
 5️⃣ Exit
 
@@ -106,9 +106,9 @@ Close the program.
 ## Work Team 
 1- Bader Aljubayri
 
-2- ghala Almutairi
+2- Ghala Almutairi
 
-3- joud alkhaldy 
+3- Joud alkhaldy 
 
 4- Ali Arishi
 
