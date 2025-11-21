@@ -25,13 +25,13 @@ Everything is stored in memory using a list of Python dictionaries.
 
 ##  Features
 
-- ➕ Add habits with a target number of hours per day  
-- 🕒 Log progress for each habit  
-- 🔥 Overachievement detection with motivational messages  
-- 📊 Progress percentage calculation  
-- 👀 View all habits in a clean format  
-- 🗑️ Delete habits using their number  
-- 📟 User-friendly text menu system
+-  Add habits with a target number of hours per day  
+-  Log progress for each habit  
+-  Overachievement detection with motivational messages  
+-  Progress percentage calculation  
+-  View all habits in a clean format  
+-  Delete habits using their number  
+-  User-friendly text menu system
 
 ---
 
@@ -108,7 +108,7 @@ Close the program.
 
 2- Ghala Almutairi
 
-3- Joud alkhaldy 
+3- Joud Alkhaldi 
 
 4- Ali Arishi
 
