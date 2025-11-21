@@ -52,7 +52,7 @@ Each habit is stored as a Python dictionary:
 
 The program provides several key functions:
 
-1️⃣ Add Habit
+1 -  Add Habit
 
 Enter habit name
 
@@ -60,7 +60,7 @@ Enter daily target hours
 
 Habit is saved in the tracker
 
-2️⃣ Mark Habit as Completed
+2️ -  Mark Habit as Completed
 
 Select a habit by number
 
@@ -80,7 +80,7 @@ Reached target: “Great job!”
 
 Exceeded target: “Outstanding work!”
 
-3️⃣ Show All Habits
+3️ -  Show All Habits
 
 Displays:
 
@@ -96,11 +96,11 @@ Completion flag
 
 Progress percentage
 
-4️⃣ Delete Habit
+4️ -  Delete Habit
 
 Remove a habit by selecting its number.
 
-5️⃣ Exit
+5️ - Exit
 
 Close the program.
 ## Work Team 
