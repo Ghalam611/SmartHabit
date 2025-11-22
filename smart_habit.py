@@ -136,6 +136,9 @@ class SmartHabit:
             if name =="":
                 print("Habit name can not be empty. ")
                 continue
+            if name.isdigit(): #check if the habit name was a number
+                print("Habit name can not be number.")
+                continue
             if self.habit_exists(name):
                 print("This habit already exisit. please enter a different habit. ")
                 continue
