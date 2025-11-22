@@ -85,17 +85,16 @@ elif menu == "➕ Add Habit":
             # Cleaned input value
             clean_name = name.strip()
             
-            # --- 1. Check for empty name ---
+            # 1. Check for empty name
             if not clean_name:
                 st.error("Habit name cannot be empty.")
                 
-            # --- 2. Check for ONLY number input ---
-            # This uses .isnumeric() on the cleaned string to check if it contains only digits.
+            # 2. Check for ONLY number input
             elif clean_name.isnumeric():
                 st.error("Habit name must contain text, not just numbers.")
                 
             else:
-                # --- 3. Check for duplicate name (case-insensitive) ---
+                # 3. Check for duplicate name (case-insensitive) ---
                 existing_names = [h["name"].lower() for h in tracker.habits]
                 if clean_name.lower() in existing_names:
                     st.error("This habit already exists. Please enter a different name.")
