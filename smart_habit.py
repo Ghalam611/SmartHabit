@@ -10,7 +10,7 @@ class SmartHabit:
         self.next_number = 1  # habit counter
         self.data_file = "habits_data.json"
         self.load_data()
-    
+        
     def load_data(self):
         #Load data from JSON file
         try:
