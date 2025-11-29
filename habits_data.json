@@ -14,7 +14,7 @@
     },
     {
       "number": 2,
-      "name": "read",
+      "name": "Walking",
       "target_hours": 2.0,
       "today_hours": 0,
       "completed": false,
@@ -26,4 +26,5 @@
   ],
   "next_number": 3,
   "last_updated": "2025-11-21T18:38:08.790388"
+
 }
